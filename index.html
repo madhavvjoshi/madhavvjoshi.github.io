@@ -8,17 +8,15 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(180deg, #0d1117, #161b22);
+            background: #0d1117;
             color: #e6edf3;
         }
 
         nav {
-            background: #0d1117;
-            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
+            padding: 20px 50px;
+            background: #161b22;
         }
 
         nav a {
@@ -30,57 +28,60 @@
 
         header {
             text-align: center;
-            padding: 100px 20px;
+            padding: 100px 20px 60px;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 50px;
             margin-bottom: 10px;
         }
 
-        .highlight {
+        .subtitle {
+            font-size: 20px;
             color: #58a6ff;
         }
 
+        .btn {
+            display: inline-block;
+            margin: 15px 10px 0;
+            padding: 10px 18px;
+            background: #58a6ff;
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         .section {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
             padding: 60px 20px;
         }
 
         h2 {
             border-left: 4px solid #58a6ff;
-            padding-left: 15px;
+            padding-left: 12px;
             margin-bottom: 30px;
+        }
+
+        ul {
+            line-height: 1.8;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
 
         .card {
             background: #161b22;
             padding: 25px;
-            border-radius: 12px;
-            transition: 0.3s;
+            border-radius: 10px;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0px 8px 25px rgba(88,166,255,0.2);
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background: #58a6ff;
-            color: black;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
+        .card h3 {
+            margin-top: 0;
         }
 
         footer {
@@ -97,7 +98,7 @@
 <nav>
     <div><strong>Madhav Joshi</strong></div>
     <div>
-        <a href="#about">About</a>
+        <a href="#skills">Core Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
@@ -105,40 +106,61 @@
 
 <header>
     <h1>Transmission Engineer</h1>
-    <p>Drivetrain Systems • Gearbox Design • Differential Development • Load Analysis</p>
-    <p class="highlight">E-BAJA 2026 | Genesis 16 Motorsports</p>
+    <div class="subtitle">Drivetrain Systems • Gearbox Design • Differential Development</div>
+
+    <a class="btn" href="#">Download Resume</a>
+    <a class="btn" href="#">LinkedIn</a>
 </header>
 
-<div class="section" id="about">
-    <h2>About Me</h2>
-    <p>
-        I specialize in transmission system development for electric off-road vehicles.
-        My work includes torque flow analysis, 2-stage gearbox design, belt drive optimization,
-        shaft stress calculation, bearing life estimation, and differential integration.
-    </p>
+<div class="section" id="skills">
+    <h2>Core Competencies</h2>
+    <ul>
+        <li>Transmission System Architecture Design</li>
+        <li>2-Stage Gearbox Torque & Stress Calculations</li>
+        <li>Belt Drive Optimization (8M vs 14M Analysis)</li>
+        <li>Open Differential Development</li>
+        <li>Shaft Bending & Torsion Analysis</li>
+        <li>Bearing Life Estimation (SKF Selection)</li>
+        <li>Tractive Effort & Vehicle Acceleration Modeling</li>
+    </ul>
 </div>
 
 <div class="section" id="projects">
-    <h2>Engineering Projects</h2>
+    <h2>Flagship Projects</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h3>2-Stage Gearbox (E-BAJA 2026)</h3>
-            <p>Designed complete drivetrain reduction system with torque validation, EN36 gears, and SKF bearing selection.</p>
-            <a class="btn" href="#">View Report</a>
+            <h3>2-Stage Gearbox – E-BAJA 2026</h3>
+            <p>Designed full drivetrain reduction system for 9kW electric off-road vehicle.</p>
+            <ul>
+                <li>Torque flow validation up to peak load</li>
+                <li>EN36 gear selection</li>
+                <li>Shaft & bearing stress calculations</li>
+            </ul>
+            <a class="btn" href="gearbox.html">View Full Case Study</a>
         </div>
 
         <div class="card">
-            <h3>Belt Slip Optimization</h3>
-            <p>Compared 8M vs 14M belt pitch, analyzed acceleration time vs belt width vs bearing load trade-off.</p>
-            <a class="btn" href="#">View Study</a>
+            <h3>Belt Slip Optimization Study</h3>
+            <p>Resolved high-load belt slip under aggressive acceleration.</p>
+            <ul>
+                <li>Compared 8M vs 14M pitch systems</li>
+                <li>Analyzed belt width vs bearing load tradeoff</li>
+                <li>Optimized reduction ratio for launch performance</li>
+            </ul>
+            <a class="btn" href="belt.html">View Full Study</a>
         </div>
 
         <div class="card">
-            <h3>Front Differential System</h3>
-            <p>Designed open differential integrated from OG gearbox output while eliminating prop shaft layout.</p>
-            <a class="btn" href="#">View Design</a>
+            <h3>Front Differential Integration</h3>
+            <p>Designed open differential without prop shaft configuration.</p>
+            <ul>
+                <li>Integrated with OG gearbox output</li>
+                <li>Maintained compact packaging</li>
+                <li>Validated torque transfer stability</li>
+            </ul>
+            <a class="btn" href="differential.html">View Design Details</a>
         </div>
 
     </div>
@@ -147,8 +169,7 @@
 <div class="section" id="contact">
     <h2>Contact</h2>
     <p>Email: your-email@gmail.com</p>
-    <p>LinkedIn: <a href="#">Add LinkedIn URL</a></p>
-    <p>GitHub: <a href="https://github.com/madhavjoshi">github.com/madhavjoshi</a></p>
+    <p>LinkedIn: Add your link</p>
 </div>
 
 <footer>
