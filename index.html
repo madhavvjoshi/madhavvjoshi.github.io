@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,12 +79,16 @@
             padding-bottom: 4px;
         }
 
+        /* EXPERIENCE CARDS */
+
         .exp-card {
             border: 1px solid #ddd;
             background: #fafafa;
             padding: 14px;
             margin-bottom: 12px;
             transition: 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
         }
 
         .exp-card:hover {
@@ -96,21 +99,33 @@
         .exp-title {
             font-weight: bold;
             font-size: 14px;
-            margin-bottom: 4px;
         }
 
         .exp-meta {
             font-size: 12px;
             color: #666;
-            margin-bottom: 8px;
+            margin-top: 4px;
         }
 
-        .exp-card ul {
+        .exp-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .exp-card:hover .exp-details {
+            max-height: 300px;
+            margin-top: 10px;
+        }
+
+        .exp-details ul {
             margin: 0;
             padding-left: 18px;
             font-size: 13px;
             line-height: 1.5;
         }
+
+        /* PROJECTS */
 
         .projects-grid {
             display: grid;
@@ -145,6 +160,15 @@
             padding: 20px 0;
         }
 
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 20px;
+            }
+            .container {
+                padding: 30px 15px;
+            }
+        }
+
     </style>
 </head>
 
@@ -169,17 +193,18 @@
 
     <div class="intro">
         I lead complete drivetrain and high-voltage system integration for an electric off-road platform.
-        My work spans transmission architecture, custom CV joint development, motor–controller calibration,
-        torque validation, manufacturing implementation, and performance optimization.
+        My work spans transmission architecture, custom CV joint development,
+        motor–controller calibration, torque validation, manufacturing execution,
+        and vehicle performance optimization.
     </div>
 
     <div class="highlight-bar">
-        <div class="highlight">2-Stage EN36 Gearbox Design</div>
+        <div class="highlight">2-Stage EN36 Gearbox</div>
         <div class="highlight">Motor–Transmission Integration</div>
         <div class="highlight">MCU Tuning & CAN Calibration</div>
         <div class="highlight">Custom CV Joint Engineering</div>
-        <div class="highlight">Manufacturing-First Design</div>
-        <div class="highlight">Vehicle Dynamics & DAQ Systems</div>
+        <div class="highlight">Manufacturing Leadership</div>
+        <div class="highlight">Vehicle Dynamics & DAQ</div>
     </div>
 
     <h2 id="experience">Professional Experience</h2>
@@ -188,37 +213,49 @@
         <div class="exp-title">
             Transmission & High Voltage Lead – SAEINDIA eBAJA 2026
         </div>
-        <div class="exp-meta">NATRAX, Indore | Mar 2025 – Present</div>
-        <ul>
-            <li>Full drivetrain architecture (Pulley + 2-Stage Gearbox + Differential)</li>
-            <li>Torque–speed validation & structural reliability analysis</li>
-            <li>MCU tuning (FOC, torque limits, regen mapping)</li>
-            <li>CAN-based calibration & HV safety integration</li>
-        </ul>
+        <div class="exp-meta">
+            NATRAX, Indore | Mar 2025 – Present
+        </div>
+        <div class="exp-details">
+            <ul>
+                <li>Full drivetrain architecture (Pulley + 2-Stage Gearbox + Differential)</li>
+                <li>Torque–speed validation & structural reliability analysis</li>
+                <li>MCU tuning (FOC, torque limits, regen mapping)</li>
+                <li>CAN-based calibration & HV safety integration</li>
+            </ul>
+        </div>
     </div>
 
     <div class="exp-card">
         <div class="exp-title">
             Junior Powertrain Design Analyst – eBAJA 2025
         </div>
-        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
-        <ul>
-            <li>Pulley ratio optimization for acceleration performance</li>
-            <li>Field-data driven drivetrain efficiency improvements</li>
-            <li>PMSM, BLDC & BMS system integration exposure</li>
-        </ul>
+        <div class="exp-meta">
+            BVRIT, Hyderabad | Jul 2024 – Feb 2025
+        </div>
+        <div class="exp-details">
+            <ul>
+                <li>Pulley ratio optimization for acceleration performance</li>
+                <li>Field-data driven drivetrain efficiency improvements</li>
+                <li>PMSM, BLDC & BMS system integration exposure</li>
+            </ul>
+        </div>
     </div>
 
     <div class="exp-card">
         <div class="exp-title">
             Manufacturing Sub-Lead – eBAJA 2025
         </div>
-        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
-        <ul>
-            <li>Manufacturing-focused design execution</li>
-            <li>Machining tolerance control & production planning</li>
-            <li>Shop-floor leadership & fabrication coordination</li>
-        </ul>
+        <div class="exp-meta">
+            BVRIT, Hyderabad | Jul 2024 – Feb 2025
+        </div>
+        <div class="exp-details">
+            <ul>
+                <li>Manufacturing-focused design execution</li>
+                <li>Machining tolerance control & production planning</li>
+                <li>Shop-floor leadership & fabrication coordination</li>
+            </ul>
+        </div>
     </div>
 
     <h2 id="projects">Technical Projects</h2>
