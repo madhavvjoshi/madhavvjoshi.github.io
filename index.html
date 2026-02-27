@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Madhav Joshi | Transmission & HV Engineer</title>
+    <title>Madhav Joshi | Transmission & HV Systems Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -10,18 +10,18 @@
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             background-color: #ffffff;
-            color: #1a1a1a;
+            color: #111;
             scroll-behavior: smooth;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
-            padding: 20px 60px;
+            padding: 18px 60px;
             position: sticky;
             top: 0;
             background: white;
-            border-bottom: 1px solid #eaeaea;
+            border-bottom: 1px solid #eee;
         }
 
         nav a {
@@ -32,86 +32,99 @@
         }
 
         nav a:hover {
-            color: #0077ff;
+            color: #0056ff;
         }
 
         header {
+            padding: 80px 20px 40px;
             text-align: center;
-            padding: 120px 20px 80px;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 42px;
             margin-bottom: 10px;
         }
 
-        .subtitle {
-            font-size: 20px;
+        .tagline {
+            font-size: 18px;
             color: #555;
-            margin-bottom: 25px;
-            line-height: 1.6;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 8px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #0077ff;
-            color: #0077ff;
-            transition: 0.3s;
+        .highlight-strip {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
         }
 
-        .btn:hover {
-            background: #0077ff;
-            color: white;
+        .badge {
+            border: 1px solid #0056ff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #0056ff;
         }
 
         .section {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            padding: 80px 20px;
+            padding: 40px 20px;
         }
 
         h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-            border-left: 4px solid #0077ff;
-            padding-left: 12px;
+            font-size: 22px;
+            border-left: 4px solid #0056ff;
+            padding-left: 10px;
+            margin-bottom: 20px;
         }
 
-        .skills-list li {
-            margin-bottom: 10px;
+        .experience-block {
+            margin-bottom: 25px;
         }
 
-        .grid {
+        .experience-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .exp-meta {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .experience-block ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
         }
 
-        .card {
-            border: 1px solid #eaeaea;
-            padding: 25px;
-            border-radius: 10px;
-            transition: 0.3s;
+        .project-card {
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
         }
 
-        .card:hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
+        .project-card h3 {
+            font-size: 15px;
             margin-top: 0;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
-            color: #888;
-            border-top: 1px solid #eaeaea;
+            padding: 25px;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+            color: #777;
         }
 
     </style>
@@ -122,8 +135,7 @@
 <nav>
     <div><strong>Madhav Joshi</strong></div>
     <div>
-        <a href="#about">About</a>
-        <a href="#skills">Expertise</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
@@ -131,87 +143,118 @@
 
 <header>
     <h1>Madhav Joshi</h1>
-    <div class="subtitle">
-        Transmission & High Voltage Lead – SAEINDIA eBAJA 2026 <br>
-        Drivetrain Systems • Gearbox Architecture • Motor–Transmission Integration
+    <div class="tagline">
+        Transmission & High Voltage Lead – SAEINDIA eBAJA 2026  
+        | Drivetrain Architecture | Motor–Transmission Integration
     </div>
 
-    <a class="btn" href="#">Download Resume</a>
-    <a class="btn" href="https://www.linkedin.com/">LinkedIn</a>
+    <div class="highlight-strip">
+        <div class="badge">Transmission System Architecture</div>
+        <div class="badge">Custom CV Joint Development</div>
+        <div class="badge">MCU Tuning & CAN Calibration</div>
+        <div class="badge">Manufacturing-Led Design</div>
+        <div class="badge">Powertrain Performance Optimization</div>
+        <div class="badge">Cross-Functional Technical Leadership</div>
+    </div>
 </header>
 
-<div class="section" id="about">
-    <h2>About Me</h2>
-    <p>
-        I lead the Transmission and High Voltage systems for Team Genesis 16 Motorsports (SAEINDIA eBAJA 2026).
-        My work spans complete drivetrain architecture — including pulley reduction, 2-stage EN36 gearbox design,
-        differential integration, and custom CV joint development.
-    </p>
+<div class="section" id="experience">
 
-    <p>
-        Beyond mechanical design, I manage motor–transmission integration through advanced MCU tuning
-        (FOC parameters, torque limits, throttle curve shaping, regenerative braking mapping),
-        CAN-based calibration, and high-voltage safety system implementation.
-    </p>
-</div>
+    <h2>Professional Experience</h2>
 
-<div class="section" id="skills">
-    <h2>Core Expertise</h2>
-    <ul class="skills-list">
-        <li>Complete Transmission System Architecture (Electric ATV)</li>
-        <li>2-Stage EN36 Gearbox Design & Torque Validation</li>
-        <li>Custom CV Joint Development (27° → 37° Articulation)</li>
-        <li>Belt & Chain Drive Performance Optimization</li>
-        <li>Shaft Bending, Torsion & Bearing Life Calculations</li>
-        <li>Motor–Transmission Integration & MCU Tuning</li>
-        <li>CAN-Based Motor Controller Calibration (TrueDRIVE – IRP Systems)</li>
-        <li>HV System Safety Integration & BMS Coordination</li>
-        <li>Vehicle Dynamics & Tractive Effort Modeling</li>
-        <li>DAQ Systems for Acceleration & Suspension Analysis</li>
-    </ul>
+    <div class="experience-block">
+        <div class="experience-title">
+            Transmission & High Voltage Lead – Team Genesis 16 Motorsports
+        </div>
+        <div class="exp-meta">SAEINDIA eBAJA 2026 | NATRAX, Indore | Mar 2025 – Present</div>
+        <ul>
+            <li>Designed complete transmission architecture (pulley reduction + 2-stage EN36 gearbox + differential).</li>
+            <li>Led motor–transmission integration including FOC tuning, torque mapping, regen calibration.</li>
+            <li>Implemented CAN-based controller calibration & HV safety system integration.</li>
+            <li>Validated drivetrain through torque–speed, efficiency & structural reliability analysis.</li>
+        </ul>
+    </div>
+
+    <div class="experience-block">
+        <div class="experience-title">
+            Junior Powertrain Design Analyst – eBAJA 2025
+        </div>
+        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
+        <ul>
+            <li>Optimized pulley ratios & traction characteristics for improved vehicle acceleration.</li>
+            <li>Developed cross-functional understanding of PMSM, BLDC & BMS integration.</li>
+            <li>Converted test-bench and field data into measurable drivetrain improvements.</li>
+        </ul>
+    </div>
+
+    <div class="experience-block">
+        <div class="experience-title">
+            Manufacturing Sub-Lead – eBAJA 2025
+        </div>
+        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
+        <ul>
+            <li>Led manufacturing-driven design approach ensuring production efficiency.</li>
+            <li>Directed fabrication planning, machining coordination & tolerance control.</li>
+            <li>Integrated industry exposure insights into practical vehicle build execution.</li>
+        </ul>
+    </div>
+
 </div>
 
 <div class="section" id="projects">
-    <h2>Selected Engineering Work</h2>
 
-    <div class="grid">
+    <h2>Technical Projects</h2>
 
-        <div class="card">
+    <div class="projects-grid">
+
+        <div class="project-card">
             <h3>Complete Transmission System – eBAJA 2026</h3>
-            <p>Designed and validated full drivetrain architecture for 9kW electric off-road vehicle.</p>
-            <a class="btn" href="gearbox.html">View Case Study</a>
+            Full drivetrain reduction system for 9kW electric ATV.
         </div>
 
-        <div class="card">
+        <div class="project-card">
             <h3>Custom CV Joint Development</h3>
-            <p>Reverse-engineered and redesigned CV joint improving articulation from 27° to 37°.</p>
-            <a class="btn" href="cvjoint.html">View Engineering Details</a>
+            Reverse-engineered & improved articulation from 27° → 37°.
         </div>
 
-        <div class="card">
-            <h3>MCU Tuning & Powertrain Calibration</h3>
-            <p>Advanced motor controller tuning with CAN-based calibration & torque mapping.</p>
-            <a class="btn" href="mcu.html">View Technical Breakdown</a>
+        <div class="project-card">
+            <h3>MCU Tuning & Controller Calibration</h3>
+            TrueDRIVE-based torque & throttle mapping optimization.
         </div>
 
-        <div class="card">
-            <h3>DAQ & Performance Measurement Systems</h3>
-            <p>Developed acceleration, suspension travel & vehicle attitude measurement systems.</p>
-            <a class="btn" href="daq.html">View System Architecture</a>
+        <div class="project-card">
+            <h3>CFD Cooling System for Transmission</h3>
+            ANSYS Fluent & COMSOL airflow optimization.
+        </div>
+
+        <div class="project-card">
+            <h3>Laser-Based Acceleration Measurement Kit</h3>
+            Raspberry Pi & Python-based vehicle performance analysis.
+        </div>
+
+        <div class="project-card">
+            <h3>Vehicle Attitude DAQ System</h3>
+            ESP32 + MPU6050 real-time roll, pitch & yaw measurement.
+        </div>
+
+        <div class="project-card">
+            <h3>Suspension Travel DAQ System</h3>
+            Linear potentiometer-based suspension motion tracking.
         </div>
 
     </div>
+
 </div>
 
 <div class="section" id="contact">
     <h2>Contact</h2>
-    <p>Email: madhavjoshi2819@gmail.com</p>
-    <p>Phone: +91 9823289767</p>
-    <p>Location: Pune, Maharashtra, India</p>
+    Email: madhavjoshi2819@gmail.com  
+    | Phone: +91 9823289767  
+    | Pune, Maharashtra
 </div>
 
 <footer>
-    © 2026 Madhav Joshi | Transmission & High Voltage Systems Portfolio
+    © 2026 Madhav Joshi | Transmission & High Voltage Systems Engineer
 </footer>
 
 </body>
