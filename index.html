@@ -11,6 +11,7 @@
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
             color: #111;
+            scroll-behavior: smooth;
         }
 
         nav {
@@ -48,27 +49,34 @@
         .designation {
             font-size: 15px;
             color: #555;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .intro {
             font-size: 14px;
             line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .button-group {
             margin-bottom: 30px;
         }
 
-        .highlight-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 35px;
+        .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-right: 10px;
+            border: 2px solid #c00000;
+            color: #c00000;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .highlight {
-            background: #f6f6f6;
-            padding: 6px 12px;
-            font-size: 13px;
-            border-left: 3px solid #c00000;
+        .btn:hover {
+            background: #c00000;
+            color: white;
         }
 
         h2 {
@@ -79,21 +87,18 @@
             padding-bottom: 4px;
         }
 
-        /* EXPERIENCE CARDS */
+        /* EXPERIENCE */
 
         .exp-card {
             border: 1px solid #ddd;
-            background: #fafafa;
             padding: 14px;
             margin-bottom: 12px;
-            transition: 0.3s ease;
-            overflow: hidden;
             cursor: pointer;
+            transition: 0.3s ease;
         }
 
         .exp-card:hover {
             box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            transform: translateY(-3px);
         }
 
         .exp-title {
@@ -108,21 +113,14 @@
         }
 
         .exp-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-
-        .exp-card:hover .exp-details {
-            max-height: 300px;
+            display: none;
             margin-top: 10px;
+            font-size: 13px;
         }
 
         .exp-details ul {
-            margin: 0;
             padding-left: 18px;
-            font-size: 13px;
-            line-height: 1.5;
+            margin: 0;
         }
 
         /* PROJECTS */
@@ -135,7 +133,6 @@
 
         .project-card {
             border: 1px solid #ddd;
-            background: #fafafa;
             padding: 12px;
             font-size: 13px;
             transition: 0.3s ease;
@@ -147,8 +144,16 @@
 
         .project-title {
             font-weight: bold;
-            font-size: 13px;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+        }
+
+        .project-btn {
+            margin-top: 8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #c00000;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         footer {
@@ -192,30 +197,21 @@
     </div>
 
     <div class="intro">
-        I lead complete drivetrain and high-voltage system integration for an electric off-road platform.
-        My work spans transmission architecture, custom CV joint development,
-        motor–controller calibration, torque validation, manufacturing execution,
-        and vehicle performance optimization.
+        I lead drivetrain and high-voltage system integration for an electric off-road platform.
+        My expertise spans transmission architecture, motor–controller calibration,
+        manufacturing implementation, and performance optimization.
     </div>
 
-    <div class="highlight-bar">
-        <div class="highlight">2-Stage EN36 Gearbox</div>
-        <div class="highlight">Motor–Transmission Integration</div>
-        <div class="highlight">MCU Tuning & CAN Calibration</div>
-        <div class="highlight">Custom CV Joint Engineering</div>
-        <div class="highlight">Manufacturing Leadership</div>
-        <div class="highlight">Vehicle Dynamics & DAQ</div>
+    <div class="button-group">
+        <a class="btn" href="Madhav_Joshi_Resume.pdf" target="_blank">Download Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">LinkedIn</a>
     </div>
 
     <h2 id="experience">Professional Experience</h2>
 
-    <div class="exp-card">
-        <div class="exp-title">
-            Transmission & High Voltage Lead – SAEINDIA eBAJA 2026
-        </div>
-        <div class="exp-meta">
-            NATRAX, Indore | Mar 2025 – Present
-        </div>
+    <div class="exp-card" onclick="toggleDetails(this)">
+        <div class="exp-title">Transmission & High Voltage Lead – SAEINDIA eBAJA 2026</div>
+        <div class="exp-meta">NATRAX, Indore | Mar 2025 – Present</div>
         <div class="exp-details">
             <ul>
                 <li>Full drivetrain architecture (Pulley + 2-Stage Gearbox + Differential)</li>
@@ -226,29 +222,21 @@
         </div>
     </div>
 
-    <div class="exp-card">
-        <div class="exp-title">
-            Junior Powertrain Design Analyst – eBAJA 2025
-        </div>
-        <div class="exp-meta">
-            BVRIT, Hyderabad | Jul 2024 – Feb 2025
-        </div>
+    <div class="exp-card" onclick="toggleDetails(this)">
+        <div class="exp-title">Junior Powertrain Design Analyst – eBAJA 2025</div>
+        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
         <div class="exp-details">
             <ul>
                 <li>Pulley ratio optimization for acceleration performance</li>
                 <li>Field-data driven drivetrain efficiency improvements</li>
-                <li>PMSM, BLDC & BMS system integration exposure</li>
+                <li>PMSM, BLDC & BMS integration exposure</li>
             </ul>
         </div>
     </div>
 
-    <div class="exp-card">
-        <div class="exp-title">
-            Manufacturing Sub-Lead – eBAJA 2025
-        </div>
-        <div class="exp-meta">
-            BVRIT, Hyderabad | Jul 2024 – Feb 2025
-        </div>
+    <div class="exp-card" onclick="toggleDetails(this)">
+        <div class="exp-title">Manufacturing Sub-Lead – eBAJA 2025</div>
+        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
         <div class="exp-details">
             <ul>
                 <li>Manufacturing-focused design execution</li>
@@ -265,31 +253,22 @@
         <div class="project-card">
             <div class="project-title">Complete Transmission System – eBAJA 2026</div>
             9kW electric ATV drivetrain reduction system.
+            <br>
+            <a class="project-btn" href="#">View Details →</a>
         </div>
 
         <div class="project-card">
             <div class="project-title">Custom CV Joint Development</div>
             Articulation improvement from 27° → 37°.
+            <br>
+            <a class="project-btn" href="#">View Details →</a>
         </div>
 
         <div class="project-card">
             <div class="project-title">MCU Tuning & Controller Calibration</div>
             TrueDRIVE torque & throttle optimization.
-        </div>
-
-        <div class="project-card">
-            <div class="project-title">CFD-Based Cooling System</div>
-            ANSYS Fluent & COMSOL airflow optimization.
-        </div>
-
-        <div class="project-card">
-            <div class="project-title">Laser Acceleration Measurement Kit</div>
-            Python-based vehicle performance analytics.
-        </div>
-
-        <div class="project-card">
-            <div class="project-title">Vehicle Attitude & Suspension DAQ</div>
-            ESP32-based dynamic response measurement.
+            <br>
+            <a class="project-btn" href="#">View Details →</a>
         </div>
 
     </div>
@@ -305,6 +284,13 @@
 <footer>
     © 2026 Madhav Joshi | Transmission & High Voltage Systems Engineer
 </footer>
+
+<script>
+function toggleDetails(card) {
+    const details = card.querySelector('.exp-details');
+    details.style.display = details.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
