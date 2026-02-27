@@ -8,123 +8,115 @@
 
         body {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: #ffffff;
             color: #111;
-            scroll-behavior: smooth;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
-            padding: 18px 60px;
-            position: sticky;
-            top: 0;
-            background: white;
-            border-bottom: 1px solid #eee;
+            padding: 15px 60px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
-            margin-left: 25px;
-            font-weight: 500;
+            color: #222;
+            margin-left: 20px;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: #0056ff;
+            color: #d50000;
         }
 
-        header {
-            padding: 80px 20px 40px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .tagline {
-            font-size: 18px;
-            color: #555;
-        }
-
-        .highlight-strip {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .badge {
-            border: 1px solid #0056ff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: #0056ff;
-        }
-
-        .section {
+        .container {
             max-width: 1100px;
             margin: auto;
             padding: 40px 20px;
         }
 
-        h2 {
-            font-size: 22px;
-            border-left: 4px solid #0056ff;
-            padding-left: 10px;
+        h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .designation {
+            font-size: 16px;
+            color: #555;
             margin-bottom: 20px;
+        }
+
+        .highlight-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background: #f5f5f5;
+            padding: 6px 12px;
+            font-size: 13px;
+            border-left: 3px solid #d50000;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d50000;
+            padding-bottom: 5px;
         }
 
         .experience-block {
             margin-bottom: 25px;
         }
 
-        .experience-title {
+        .role {
             font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 15px;
         }
 
-        .exp-meta {
-            font-size: 14px;
+        .meta {
+            font-size: 13px;
             color: #555;
             margin-bottom: 8px;
         }
 
-        .experience-block ul {
+        ul {
             margin: 0;
             padding-left: 18px;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
         }
 
         .project-card {
-            border: 1px solid #eee;
+            border: 1px solid #ddd;
             padding: 15px;
-            border-radius: 8px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .project-card h3 {
-            font-size: 15px;
             margin-top: 0;
+            font-size: 14px;
         }
 
         footer {
+            margin-top: 40px;
+            padding: 20px;
             text-align: center;
-            padding: 25px;
-            font-size: 13px;
-            border-top: 1px solid #eee;
-            color: #777;
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+            color: #555;
         }
 
     </style>
@@ -141,116 +133,112 @@
     </div>
 </nav>
 
-<header>
+<div class="container">
+
     <h1>Madhav Joshi</h1>
-    <div class="tagline">
+    <div class="designation">
         Transmission & High Voltage Lead – SAEINDIA eBAJA 2026  
-        | Drivetrain Architecture | Motor–Transmission Integration
+        | Drivetrain Systems Engineer
     </div>
 
-    <div class="highlight-strip">
-        <div class="badge">Transmission System Architecture</div>
-        <div class="badge">Custom CV Joint Development</div>
-        <div class="badge">MCU Tuning & CAN Calibration</div>
-        <div class="badge">Manufacturing-Led Design</div>
-        <div class="badge">Powertrain Performance Optimization</div>
-        <div class="badge">Cross-Functional Technical Leadership</div>
+    <div class="highlight-bar">
+        <div class="highlight">Transmission Architecture Development</div>
+        <div class="highlight">2-Stage EN36 Gearbox Design</div>
+        <div class="highlight">Motor–Transmission Integration</div>
+        <div class="highlight">MCU Tuning & CAN Calibration</div>
+        <div class="highlight">Manufacturing-Led Design</div>
+        <div class="highlight">Custom CV Joint Engineering</div>
     </div>
-</header>
 
-<div class="section" id="experience">
-
-    <h2>Professional Experience</h2>
+    <h2 id="experience">Professional Experience</h2>
 
     <div class="experience-block">
-        <div class="experience-title">
+        <div class="role">
             Transmission & High Voltage Lead – Team Genesis 16 Motorsports
         </div>
-        <div class="exp-meta">SAEINDIA eBAJA 2026 | NATRAX, Indore | Mar 2025 – Present</div>
+        <div class="meta">
+            SAEINDIA eBAJA 2026 | NATRAX, Indore | Mar 2025 – Present
+        </div>
         <ul>
-            <li>Designed complete transmission architecture (pulley reduction + 2-stage EN36 gearbox + differential).</li>
-            <li>Led motor–transmission integration including FOC tuning, torque mapping, regen calibration.</li>
-            <li>Implemented CAN-based controller calibration & HV safety system integration.</li>
-            <li>Validated drivetrain through torque–speed, efficiency & structural reliability analysis.</li>
+            <li>Designed full transmission architecture including pulley reduction, 2-stage EN36 gearbox and differential integration.</li>
+            <li>Executed torque–speed validation, shaft stress analysis and bearing life estimation.</li>
+            <li>Led motor controller tuning (FOC parameters, torque limits, regen mapping).</li>
+            <li>Implemented CAN-based controller calibration and HV safety system integration.</li>
         </ul>
     </div>
 
     <div class="experience-block">
-        <div class="experience-title">
+        <div class="role">
             Junior Powertrain Design Analyst – eBAJA 2025
         </div>
-        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
+        <div class="meta">
+            BVRIT, Hyderabad | Jul 2024 – Feb 2025
+        </div>
         <ul>
-            <li>Optimized pulley ratios & traction characteristics for improved vehicle acceleration.</li>
-            <li>Developed cross-functional understanding of PMSM, BLDC & BMS integration.</li>
-            <li>Converted test-bench and field data into measurable drivetrain improvements.</li>
+            <li>Optimized pulley ratios and traction characteristics to improve acceleration performance.</li>
+            <li>Translated test-bench and on-ground data into measurable drivetrain efficiency improvements.</li>
+            <li>Developed integration understanding of PMSM, BLDC motors and BMS systems.</li>
         </ul>
     </div>
 
     <div class="experience-block">
-        <div class="experience-title">
+        <div class="role">
             Manufacturing Sub-Lead – eBAJA 2025
         </div>
-        <div class="exp-meta">BVRIT, Hyderabad | Jul 2024 – Feb 2025</div>
+        <div class="meta">
+            BVRIT, Hyderabad | Jul 2024 – Feb 2025
+        </div>
         <ul>
-            <li>Led manufacturing-driven design approach ensuring production efficiency.</li>
-            <li>Directed fabrication planning, machining coordination & tolerance control.</li>
-            <li>Integrated industry exposure insights into practical vehicle build execution.</li>
+            <li>Directed fabrication planning and production-centric design implementation.</li>
+            <li>Integrated machining tolerance control and assembly best practices.</li>
+            <li>Led shop-floor execution ensuring structural robustness and production efficiency.</li>
         </ul>
     </div>
 
-</div>
-
-<div class="section" id="projects">
-
-    <h2>Technical Projects</h2>
+    <h2 id="projects">Technical Projects</h2>
 
     <div class="projects-grid">
 
         <div class="project-card">
             <h3>Complete Transmission System – eBAJA 2026</h3>
-            Full drivetrain reduction system for 9kW electric ATV.
+            Designed drivetrain reduction system for 9kW electric ATV platform.
         </div>
 
         <div class="project-card">
             <h3>Custom CV Joint Development</h3>
-            Reverse-engineered & improved articulation from 27° → 37°.
+            Reverse-engineered CV joint achieving articulation improvement from 27° to 37°.
         </div>
 
         <div class="project-card">
             <h3>MCU Tuning & Controller Calibration</h3>
-            TrueDRIVE-based torque & throttle mapping optimization.
+            TrueDRIVE-based motor calibration with torque mapping & regen optimization.
         </div>
 
         <div class="project-card">
-            <h3>CFD Cooling System for Transmission</h3>
-            ANSYS Fluent & COMSOL airflow optimization.
+            <h3>CFD-Based Transmission Cooling System</h3>
+            Optimized forced convection airflow using ANSYS Fluent & COMSOL.
         </div>
 
         <div class="project-card">
             <h3>Laser-Based Acceleration Measurement Kit</h3>
-            Raspberry Pi & Python-based vehicle performance analysis.
+            Raspberry Pi + Python system for vehicle performance evaluation.
         </div>
 
         <div class="project-card">
-            <h3>Vehicle Attitude DAQ System</h3>
-            ESP32 + MPU6050 real-time roll, pitch & yaw measurement.
-        </div>
-
-        <div class="project-card">
-            <h3>Suspension Travel DAQ System</h3>
-            Linear potentiometer-based suspension motion tracking.
+            <h3>Vehicle Attitude & Suspension DAQ Systems</h3>
+            ESP32-based roll, pitch, yaw & suspension travel data acquisition.
         </div>
 
     </div>
 
-</div>
+    <h2 id="contact">Contact</h2>
 
-<div class="section" id="contact">
-    <h2>Contact</h2>
-    Email: madhavjoshi2819@gmail.com  
-    | Phone: +91 9823289767  
-    | Pune, Maharashtra
+    <p>
+        Email: madhavjoshi2819@gmail.com <br>
+        Phone: +91 9823289767 <br>
+        Location: Pune, Maharashtra, India
+    </p>
+
 </div>
 
 <footer>
