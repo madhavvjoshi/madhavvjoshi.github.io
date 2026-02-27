@@ -4,97 +4,155 @@
     <title>Madhav Joshi | Transmission Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #0d1117, #161b22);
             color: #e6edf3;
+        }
+
+        nav {
+            background: #0d1117;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
         }
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 100px 20px;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 48px;
             margin-bottom: 10px;
         }
 
-        h2 {
+        .highlight {
             color: #58a6ff;
         }
 
         .section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            border-left: 4px solid #58a6ff;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .card {
             background: #161b22;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
         }
 
-        a {
-            color: #58a6ff;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 25px rgba(88,166,255,0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #58a6ff;
+            color: black;
+            border-radius: 6px;
             text-decoration: none;
+            font-weight: 600;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
             opacity: 0.6;
         }
+
     </style>
 </head>
 
 <body>
 
+<nav>
+    <div><strong>Madhav Joshi</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
 <header>
-    <h1>Madhav Joshi</h1>
-    <p>Transmission Lead | E-BAJA | Drivetrain Design | Gearbox Analysis</p>
+    <h1>Transmission Engineer</h1>
+    <p>Drivetrain Systems • Gearbox Design • Differential Development • Load Analysis</p>
+    <p class="highlight">E-BAJA 2026 | Genesis 16 Motorsports</p>
 </header>
 
-<div class="section">
+<div class="section" id="about">
     <h2>About Me</h2>
-    <div class="card">
-        <p>I work on drivetrain system design for SAE E-BAJA vehicles. My focus includes gearbox load calculations, belt drive optimization, differential design, tractive effort analysis, and FEA validation.</p>
+    <p>
+        I specialize in transmission system development for electric off-road vehicles.
+        My work includes torque flow analysis, 2-stage gearbox design, belt drive optimization,
+        shaft stress calculation, bearing life estimation, and differential integration.
+    </p>
+</div>
+
+<div class="section" id="projects">
+    <h2>Engineering Projects</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>2-Stage Gearbox (E-BAJA 2026)</h3>
+            <p>Designed complete drivetrain reduction system with torque validation, EN36 gears, and SKF bearing selection.</p>
+            <a class="btn" href="#">View Report</a>
+        </div>
+
+        <div class="card">
+            <h3>Belt Slip Optimization</h3>
+            <p>Compared 8M vs 14M belt pitch, analyzed acceleration time vs belt width vs bearing load trade-off.</p>
+            <a class="btn" href="#">View Study</a>
+        </div>
+
+        <div class="card">
+            <h3>Front Differential System</h3>
+            <p>Designed open differential integrated from OG gearbox output while eliminating prop shaft layout.</p>
+            <a class="btn" href="#">View Design</a>
+        </div>
+
     </div>
 </div>
 
-<div class="section">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>2-Stage Gearbox Design (E-BAJA 2026)</h3>
-        <p>Designed a 2-stage reduction gearbox using EN36 gears, calculated shaft stresses, bearing life, and torque transmission limits.</p>
-    </div>
-
-    <div class="card">
-        <h3>Belt Slip Optimization Study</h3>
-        <p>Analyzed 8M vs 14M pitch belts under high torque conditions and optimized pulley width and reduction ratio.</p>
-    </div>
-
-    <div class="card">
-        <h3>Front Differential Design</h3>
-        <p>Developed open differential system avoiding prop shaft configuration, integrated with OG gearbox output.</p>
-    </div>
-</div>
-
-<div class="section">
+<div class="section" id="contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: your-email@gmail.com</p>
-        <p>LinkedIn: <a href="#">Add your LinkedIn link here</a></p>
-        <p>GitHub: <a href="#">Add GitHub link</a></p>
-    </div>
+    <p>Email: your-email@gmail.com</p>
+    <p>LinkedIn: <a href="#">Add LinkedIn URL</a></p>
+    <p>GitHub: <a href="https://github.com/madhavjoshi">github.com/madhavjoshi</a></p>
 </div>
 
 <footer>
-    © 2026 Madhav Joshi | Built with GitHub Pages
+    © 2026 Madhav Joshi | Transmission Engineering Portfolio
 </footer>
 
 </body>
