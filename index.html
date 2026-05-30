@@ -177,36 +177,67 @@ transition:all 0.5s ease;
 transform:scale(1.08);
 filter:brightness(0.25);
 }
+.project-details{
 
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:250px;
-background:rgba(0,0,0,0.9);
-padding:25px;
-display:flex;
-flex-direction:column;
-justify-content:center;
+max-height:0;
+
+overflow:hidden;
+
 opacity:0;
-transition:0.4s ease;
+
+padding:0 20px;
+
+transition:
+max-height 0.8s ease,
+opacity 0.8s ease,
+padding 0.8s ease;
+
 }
 
-.card:hover .overlay{
+.card:hover .project-details{
+
+max-height:400px;
+
 opacity:1;
+
+padding:20px;
+
 }
 
-.overlay h4{
-margin-bottom:15px;
-font-size:1.2rem;
+.project-details p{
+
+color:#bfbfbf;
+
+line-height:1.8;
+
+font-size:0.95rem;
+
+overflow:hidden;
+
 }
 
-.overlay p{
-font-size:0.9rem;
-line-height:1.7;
-color:#d0d0d0;
+.card:hover .project-details p{
+
+animation:typing 2s steps(100,end);
+
 }
+
+@keyframes typing{
+
+from{
+clip-path:inset(0 100% 0 0);
+}
+
+to{
+clip-path:inset(0 0 0 0);
+}
+
+}
+
+
+
+
+
 </style>
 </head>
 
@@ -286,19 +317,32 @@ Achievements
 
 <img id="cvjoint" src="gb1.jpg" alt="CV Joint">
 
-<div class="overlay">
+<div class="card-content">
 
-<h4>Custom CV Joint Development</h4>
+<h3>Custom CV Joint</h3>
 
 <p>
-Reverse-engineered OEM geometry and developed a custom CV joint integrated directly with the gearbox output shaft. Eliminated intermediate assemblies, reduced packaging volume, improved articulation angle, and enhanced drivetrain efficiency for SAE eBAJA competition.
+Integrated gearbox output architecture.
 </p>
 
 </div>
 
-<div class="card-content">
-<h3>Custom CV Joint</h3>
-<p>Integrated gearbox output architecture.</p>
+<div class="project-details">
+
+<p>
+
+Reverse-engineered OEM geometry and developed a custom CV joint directly integrated with the gearbox output shaft.
+
+Reduced packaging volume and eliminated intermediate assemblies.
+
+Improved articulation angle for off-road suspension travel.
+
+Enhanced drivetrain efficiency and serviceability.
+
+Validated through design iterations and competition-level testing for SAE eBAJA.
+
+</p>
+
 </div>
 
 </div>
