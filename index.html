@@ -220,6 +220,94 @@ color:#777;
     object-fit:cover;
     transition:opacity 0.8s ease;
 }
+    .project-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.project-image img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.project-overlay{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.88);
+
+    padding:25px;
+
+    opacity:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    transform:translateY(30px);
+
+    transition:0.4s ease;
+}
+
+.project-card:hover .project-overlay{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+.project-card:hover img{
+
+    transform:scale(1.05);
+
+    filter:brightness(0.4);
+}
+
+.project-overlay h4{
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.project-overlay p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+}
+
+.project-overlay p{
+
+    overflow:hidden;
+}
+
+.project-card:hover .project-overlay p{
+
+    animation:typing 2s steps(100,end);
+}
+
+@keyframes typing{
+
+    from{
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to{
+        clip-path: inset(0 0 0 0);
+    }
+
+}
 </style>
 </head>
 
@@ -295,25 +383,17 @@ Achievements
 Projects
 </h2>
 
-<div class="card project-card">
+<div class="project-image">
 
-    <div class="slider">
-        <img id="cvjoint" src="gb1.jpg" alt="Custom CV Joint">
-    </div>
+    <img id="cvjoint" src="gb1.jpg" alt="Custom CV Joint">
 
-    <div class="card-content">
+    <div class="project-overlay">
 
-        <h3>Custom CV Joint</h3>
+        <h4>Custom CV Joint Development</h4>
 
         <p>
-            Designed and developed custom CV joint integrated with gearbox output architecture.
+            Reverse-engineered OEM geometry and developed a custom CV joint directly integrated with the gearbox output shaft. Reduced drivetrain complexity, improved articulation angle, minimized packaging volume and enhanced serviceability for SAE eBAJA competition.
         </p>
-
-        <div class="hover-description">
-
-            Reverse-engineered OEM geometry and developed a custom CV joint integrated directly with the gearbox output shaft. Reduced drivetrain complexity, eliminated intermediate assemblies, improved articulation angle, reduced weight, and optimized packaging for off-road racing applications.
-
-        </div>
 
     </div>
 
