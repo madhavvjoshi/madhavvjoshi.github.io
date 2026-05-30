@@ -282,37 +282,35 @@ Contact
 © 2026 Madhav Joshi
 </footer>
 
-  <script>
+ <script>
 
 const cvImages = [
-    "gb1.jpg",
-    "gb2.png",
-    "gb3.png"
+  "gb1.jpg",
+  "gb2.png",
+  "vi2.png"
 ];
 
-let currentImage = 0;
+let current = 0;
 
 const slider = document.getElementById("cvjoint");
 
 setInterval(() => {
 
-    slider.style.opacity = "0";
+  slider.style.opacity = "0";
 
-    setTimeout(() => {
+  setTimeout(() => {
 
-        currentImage =
-            (currentImage + 1) % cvImages.length;
+    current = (current + 1) % cvImages.length;
 
-        slider.src = cvImages[currentImage];
+    slider.src = cvImages[current];
 
-        slider.style.opacity = "1";
+    slider.style.opacity = "1";
 
-    }, 400);
+  }, 400);
 
-}, 2500);
+}, 2000);
 
 </script>
-  
 </body>
 </html>
 ```
