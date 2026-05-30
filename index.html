@@ -146,167 +146,66 @@ text-align:center;
 color:#777;
 }
 
-.project-card{
-    transition:all 0.4s ease;
-    position:relative;
-    overflow:hidden;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
 }
 
-.project-card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 20px 40px rgba(255,255,255,0.08);
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:20px;
+overflow:hidden;
+position:relative;
+transition:all 0.4s ease;
 }
 
-.project-card:hover img{
-    filter:brightness(0.4);
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(255,255,255,0.08);
 }
 
-.hover-description{
-
-    max-height:0;
-    opacity:0;
-
-    overflow:hidden;
-
-    margin-top:10px;
-
-    color:#cfcfcf;
-
-    line-height:1.7;
-
-    transition:
-        max-height 0.6s ease,
-        opacity 0.6s ease,
-        transform 0.6s ease;
-
-    transform:translateY(30px);
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:all 0.5s ease;
 }
 
-.project-card:hover .hover-description{
-
-    max-height:300px;
-
-    opacity:1;
-
-    transform:translateY(0);
+.card:hover img{
+transform:scale(1.08);
+filter:brightness(0.25);
 }
 
-    .hover-description{
-
-    border-right:2px solid white;
-    white-space:normal;
-    animation:none;
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:250px;
+background:rgba(0,0,0,0.9);
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+opacity:0;
+transition:0.4s ease;
 }
 
-.project-card:hover .hover-description{
-
-    animation:typing 3s steps(120,end) forwards;
+.card:hover .overlay{
+opacity:1;
 }
 
-@keyframes typing{
-
-    from{
-        clip-path: inset(0 100% 0 0);
-    }
-
-    to{
-        clip-path: inset(0 0 0 0);
-    }
-
-}
-    .slider img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    transition:opacity 0.8s ease;
-}
-    .project-image{
-    position:relative;
-    overflow:hidden;
+.overlay h4{
+margin-bottom:15px;
+font-size:1.2rem;
 }
 
-.project-image img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    transition:0.4s;
-}
-
-.project-overlay{
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.88);
-
-    padding:25px;
-
-    opacity:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    transform:translateY(30px);
-
-    transition:0.4s ease;
-}
-
-.project-card:hover .project-overlay{
-
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-.project-card:hover img{
-
-    transform:scale(1.05);
-
-    filter:brightness(0.4);
-}
-
-.project-overlay h4{
-
-    color:white;
-
-    margin-bottom:15px;
-}
-
-.project-overlay p{
-
-    color:#d0d0d0;
-
-    line-height:1.7;
-}
-
-.project-overlay p{
-
-    overflow:hidden;
-}
-
-.project-card:hover .project-overlay p{
-
-    animation:typing 2s steps(100,end);
-}
-
-@keyframes typing{
-
-    from{
-        clip-path: inset(0 100% 0 0);
-    }
-
-    to{
-        clip-path: inset(0 0 0 0);
-    }
-
+.overlay p{
+font-size:0.9rem;
+line-height:1.7;
+color:#d0d0d0;
 }
 </style>
 </head>
@@ -379,40 +278,71 @@ Achievements
 
 <section id="projects">
 
-<h2 class="section-title">
-Projects
-</h2>
+<h2 class="section-title">Projects</h2>
 
-<div class="project-image">
+<div class="cards">
 
-    <img id="cvjoint" src="gb1.jpg" alt="Custom CV Joint">
+<div class="card">
 
-    <div class="project-overlay">
+<img id="cvjoint" src="gb1.jpg" alt="CV Joint">
 
-        <h4>Custom CV Joint Development</h4>
+<div class="overlay">
 
-        <p>
-            Reverse-engineered OEM geometry and developed a custom CV joint directly integrated with the gearbox output shaft. Reduced drivetrain complexity, improved articulation angle, minimized packaging volume and enhanced serviceability for SAE eBAJA competition.
-        </p>
+<h4>Custom CV Joint Development</h4>
 
-    </div>
+<p>
+Reverse-engineered OEM geometry and developed a custom CV joint integrated directly with the gearbox output shaft. Eliminated intermediate assemblies, reduced packaging volume, improved articulation angle, and enhanced drivetrain efficiency for SAE eBAJA competition.
+</p>
+
+</div>
+
+<div class="card-content">
+<h3>Custom CV Joint</h3>
+<p>Integrated gearbox output architecture.</p>
+</div>
 
 </div>
 
 <div class="card">
-<img src="images/gearbox.png">
+
+<img src="gb2.png" alt="Motor Tuning">
+
+<div class="overlay">
+
+<h4>Motor Controller Tuning</h4>
+
+<p>
+Performed FOC tuning, torque mapping, regenerative braking calibration, and drivetrain optimization. Improved acceleration performance and drivability through extensive testing and validation.
+</p>
+
+</div>
+
 <div class="card-content">
 <h3>Motor Tuning</h3>
-<p>FOC tuning, torque mapping and drivetrain optimization.</p>
+<p>FOC tuning and torque mapping.</p>
 </div>
+
 </div>
 
 <div class="card">
-<img src="images/daq.png">
+
+<img src="vi2.png" alt="DAQ">
+
+<div class="overlay">
+
+<h4>DAQ System Development</h4>
+
+<p>
+Developed sensor-based data acquisition systems for vehicle testing, acceleration measurement, and dynamics validation. Integrated data logging and analysis workflows.
+</p>
+
+</div>
+
 <div class="card-content">
 <h3>DAQ System</h3>
-<p>Vehicle dynamics data acquisition and performance analysis.</p>
+<p>Vehicle performance analytics.</p>
 </div>
+
 </div>
 
 </div>
