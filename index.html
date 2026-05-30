@@ -245,7 +245,53 @@ clip-path:inset(0 0 0 0);
 
 
 
+/* APPLE SPOTLIGHT EFFECT */
 
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+height:250px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,0.15),
+transparent 70%
+);
+
+pointer-events:none;
+
+transform:
+translate(-50%,-50%);
+
+left:var(--x,50%);
+top:var(--y,50%);
+
+opacity:0;
+
+transition:opacity 0.3s ease;
+
+z-index:1;
+
+}
+
+.card:hover::before{
+
+opacity:1;
+
+}
 
 </style>
 </head>
@@ -461,6 +507,27 @@ setInterval(() => {
   }, 400);
 
 }, 2500);
+
+</script>
+ <script>
+
+document.querySelectorAll('.card').forEach(card => {
+
+card.addEventListener('mousemove', e => {
+
+const rect = card.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+
+const y = e.clientY - rect.top;
+
+card.style.setProperty('--x', x + 'px');
+
+card.style.setProperty('--y', y + 'px');
+
+});
+
+});
 
 </script>
 </body>
