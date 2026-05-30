@@ -145,6 +145,75 @@ padding:50px;
 text-align:center;
 color:#777;
 }
+
+.project-card{
+    transition:all 0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(255,255,255,0.08);
+}
+
+.project-card:hover img{
+    filter:brightness(0.4);
+}
+
+.hover-description{
+
+    max-height:0;
+    opacity:0;
+
+    overflow:hidden;
+
+    margin-top:10px;
+
+    color:#cfcfcf;
+
+    line-height:1.7;
+
+    transition:
+        max-height 0.6s ease,
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    transform:translateY(30px);
+}
+
+.project-card:hover .hover-description{
+
+    max-height:300px;
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+    .hover-description{
+
+    border-right:2px solid white;
+    white-space:normal;
+    animation:none;
+}
+
+.project-card:hover .hover-description{
+
+    animation:typing 3s steps(120,end) forwards;
+}
+
+@keyframes typing{
+
+    from{
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to{
+        clip-path: inset(0 0 0 0);
+    }
+
+}
 </style>
 </head>
 
